@@ -12,6 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private TextView userNameTextView;
+    private TextView welcomeTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         userNameTextView = findViewById(R.id.textViewUserName);
-
+        welcomeTextView = findViewById(R.id.welcomeTextView);
+        welcomeTextView.setText("Khalid Daghameen");
         // Create a Retrofit instance
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.github.com/")
